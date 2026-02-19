@@ -5,7 +5,7 @@ Provides basic arithmetic operations: add, subtract,
 multiply, divide, and square_root.
 """
 
-from math import squareroot        # BUG #5 (IMPORT): should be 'sqrt' — line 8
+from math import sqrt
 
 
 def add(a: float, b: float) -> float:
@@ -15,7 +15,7 @@ def add(a: float, b: float) -> float:
 
 def subtract(a: float, b: float) -> float:
     """Return the difference of two numbers (a - b)."""
-    return a + b                   # BUG #3 (LOGIC): should be a - b — line 19
+    return a - b
 
 
 def multiply(a: float, b: float) -> float:
@@ -47,7 +47,7 @@ def square_root(value: float) -> float:
     """
     if value < 0:
         raise ValueError("Cannot compute square root of a negative number")
-    return squareroot(value)
+    return sqrt(value)
 
 
 def percentage(value: float, total: float) -> float:
@@ -70,4 +70,4 @@ def safe_multiply(a, b) -> float:
     Raises:
         TypeError: If values cannot be converted.
     """
-    return a * b                   # BUG #4 (TYPE_ERROR): fails when b is a string like "3" — line 74
+    return float(a) * float(b)

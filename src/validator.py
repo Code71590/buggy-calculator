@@ -5,14 +5,14 @@ Ensures that user-provided values are safe and valid
 before being passed to calculator operations.
 """
 
-def validate_input(value)          # BUG #2 (SYNTAX): missing colon — line 8
+def validate_input(value):         # FIXED: added missing colon
     """Validate that a value is a valid number for calculation."""
     if value is None:
         return False, "Value cannot be None"
     try:
         num = float(value)
         if num != num:  # NaN check
-             return False, "Value is NaN"    # BUG #6 (INDENTATION): extra space — line 16
+            return False, "Value is NaN"
         return True, num
     except (ValueError, TypeError):
         return False, f"Invalid input: {value}"

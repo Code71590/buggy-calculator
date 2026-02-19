@@ -11,7 +11,6 @@ import re
 import logging
 from typing import Optional
 from datetime import datetime
-import os                          # BUG #1 (LINTING): unused import 'os' — line 15
 
 
 logger = logging.getLogger(__name__)
