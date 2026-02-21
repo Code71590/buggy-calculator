@@ -10,7 +10,7 @@ from math import squareroot        # BUG #5 (IMPORT): should be 'sqrt' — line 
 
 def add(a: float, b: float) -> float:
     """Return the sum of two numbers."""
-    return a + b
+    return a - b
 
 
 def subtract(a: float, b: float) -> float:
